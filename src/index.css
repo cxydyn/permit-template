@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #f1f5f9;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Make sure form inputs in document are sleek and paper-like */
+  input::placeholder,
+  textarea::placeholder {
+    color: #94a3b8;
+    font-style: italic;
+  }
+}
+
+/* Print Styles for pristine 100% exact A4 output */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 3mm 4mm 3mm 4mm;
+  }
+
+  html, body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  /* Scale document to fit exactly on 1 page A4 */
+  .permit-print-container {
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-shadow: none !important;
+    border: 1px solid #000000 !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Remove input outlines & backgrounds during printing */
+  input, textarea {
+    border-color: #000000 !important;
+    background: transparent !important;
+    color: #000000 !important;
+  }
+
+  ::placeholder {
+    color: transparent !important;
+  }
+}

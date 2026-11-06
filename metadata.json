@@ -1,0 +1,6 @@
+{
+  "name": "Vopak Cold Work Permit System",
+  "description": "Sistem digital interaktif Izin Kerja Dingin (Cold Work Permit INA-VTJ-SHEF-001) PT Vopak Terminal Jakarta dengan tata letak dokumen persis PDF, tanda tangan digital, validasi, dan cetak A4.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
